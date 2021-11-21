@@ -1,0 +1,509 @@
+@font-face {
+  font-family: "FiraSansLight";
+  src: url("fonts/FiraSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "FiraSansRegular";
+  src: url("fonts/FiraSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "FiraSansMedium";
+  src: url("fonts/FiraSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "FiraSansMediumItalic";
+  src: url("fonts/FiraSans-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "FiraSansBold";
+  src: url("fonts/FiraSans-Bold.ttf");
+}
+
+// Variables
+@import 'variables';
+
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+
+@import 'fancybox';
+
+@import 'modal';
+
+@tailwind preflight;
+
+@tailwind components;
+
+body {
+  font-size: 15px;
+}
+
+a {
+  @apply no-underline text-black;
+}
+
+ul {
+  @apply list-reset;
+}
+
+.btn {
+  @apply no-underline py-3 px-10 rounded leading-none;
+  transition: .4s;
+}
+
+.btn-primary {
+  @apply bg-primary text-white text-sm font-sansbold;
+}
+
+.btn-light {
+  @apply bg-primary-lighter text-white font-sansbold;
+}
+
+.btn-light:hover {
+  @apply bg-primary-dark;
+}
+
+.btn-primary:hover {
+  @apply bg-primary-light;
+}
+
+.is-clipped {
+  overflow: hidden !important;
+}
+
+.nav-bottom .header-paragraph {
+  border-right: 3px solid $primary;
+}
+
+.lang-list li:not(:last-child):after {
+  content: "|";
+}
+
+.lang-list li a.active, .lang-list li a:hover  {
+  @apply text-primary font-sansbold;
+}
+
+.slider.slick-dotted.slick-slider {
+  margin-bottom: -4px;
+}
+
+.slider-item {
+  background-size: cover;
+  height: 250px;
+}
+
+.slider .slider-item .content-wrap {
+  @apply relative;
+}
+
+.slider .slider-item .content {
+  @apply bg-white absolute mt-3 p-4;
+  border-radius: 10px 10px 10px 0;
+  right: 10%;
+  bottom: 15px;
+}
+
+.slider .slider-item .sl-certifications {
+  top: 20px;
+}
+
+.slider .slider-item .sl-certifications img {
+  max-width: 98px;
+  @apply w-full h-full;
+}
+
+.slider .slick-dots {
+  bottom: initial;
+  top: 45%;
+  right: 2%;
+  left: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.slider .slick-dots li {
+  margin: 6px 0;
+}
+
+.slider .slick-dots li button {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.slider .slick-dots li button::before {
+  content: "";
+}
+
+.slider .slick-dots li.slick-active button {
+  background: $primary;
+  width: 20px;
+  height: 20px;
+}
+
+.therapy-col a > div {
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+}
+  .tester {
+  position:  absolute;
+  top: 0;
+  width: 150px;
+  height:  100%;
+  background:  #085B66;
+  opacity:  .5;
+  border-radius: 5px;    
+}
+
+.cslider .slick-list {
+  overflow: visible;
+}
+
+.cslider .slick-arrow {
+  bottom: -60px;
+  top: inherit;
+}
+
+.useful.bg-primary-dark .therapies-slider .slick-arrow {
+  fill: #fff;
+}
+
+.useful .therapies-slider .slick-arrow {
+  fill: $primary-dark;
+}
+
+.we-suggest .therapies-slider .slick-arrow {
+  fill: $primary-dark;
+}
+
+.cslider .slick-prev {
+  left: 1rem;
+}
+
+.cslider .slick-next {
+  right: initial;
+  left: 3.5rem;
+}
+
+.cslider .container {
+  max-width: 1000px;
+}
+
+.prices {
+  background-image: url(/img/close-up-doctor.webp);
+  background-size: cover;
+}
+
+.prices-col:hover {
+  @apply text-primary-dark bg-white;
+}
+
+.prices-col svg {
+  fill: #fff;
+}
+
+.prices-col:hover svg {
+  fill: $primary-dark;
+}
+
+.about img {
+  box-shadow: 20px 20px 0 0 rgba(11,124,138,1);
+}
+
+section.certifications {
+  background: linear-gradient(#f9f9f9 50%, #fff 50%);
+}
+
+.certifications-slider .slick-arrow {
+  top: 20%;
+  fill: $primary-dark;
+}
+
+.feedback {
+  background: linear-gradient(#fff 40%, $primary 40%);
+}
+
+.feedback-col {
+  height: 450px;
+}
+
+.feedback-col .icons {
+  width: 3%;
+}
+
+.feedback-col .avatar {
+  width: 47%;
+}
+
+.feedback-col .content {
+  width: 50%;
+}
+
+.feedback-slider .slick-arrow {
+  fill: #fff;
+}
+
+.contact-img {
+  height: 285px;
+  object-fit: cover;
+}
+
+// start mobile menu
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 19;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a {
+  font-family: 'OpenSansLight';
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+// end mobile menu
+// start breadcrumb
+.breadcrumb {
+  list-style: none;
+  @apply hidden;
+}
+
+.breadcrumb li {
+  @apply text-sm text-white;
+}
+
+.breadcrumb li a {
+  @apply text-white underline;
+}
+
+.breadcrumb li a:hover {
+  @apply no-underline;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0 3px;
+  color: #fff;
+  content: "\BB";
+}
+
+.breadcrumb > li {
+  display: inline-block;
+}
+// end breadcrumb
+.markdown p {
+  @apply leading-loose text-justify;
+}
+// start prices page
+.board.centered .title {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.board .col + .col {
+  border-top: 1px solid $mygrey-dark;
+}
+.board-wrap {
+  justify-content: center;
+}
+// end prices page
+
+@media only screen and (min-width: 320px) and (max-width: 321px) {
+  .container {
+    max-width: 300px;
+  }
+  .contact-info > div {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) {
+  .open__slide {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+  }
+}
+@media only screen and (min-width: 359px) and (max-width: 360px) {
+  .container {
+    max-width: 340px;
+  }
+}
+@media (min-width: 360px) {
+  .feedback-col {
+    height: 380px;
+  }
+  .feedback {
+    background: linear-gradient(#fff 45%, $primary 45%);
+  }
+}
+@media only screen and (min-width: 374px) and (max-width: 375px) {
+  .container {
+    max-width: 355px;
+  }
+}
+@media (min-width: 375px) {
+  .contact-info img {
+    max-width: 15px;
+  }
+}
+@media (min-width: 414px) {
+  .contact-info img {
+    max-width: 100%;
+  }
+  .breadcrumb {
+    @apply block;
+  }
+}
+@media only screen and (min-width: 413px) and (max-width: 414px) {
+  .container {
+    max-width: 394px;
+  }
+}
+@media only screen and (min-width: 479px) and (max-width: 480px) {
+  .container {
+    max-width: 460px;
+  }
+}
+@media (min-width: 480px) {
+  .slider .slick-dots {
+    right: 6%;
+  }
+  .feedback-col {
+    height: 343px;
+  }
+  .open__slide {
+    position: relative;
+    left: initial;
+    top: initial;
+  }
+  .board {
+    width: 50%;
+  }
+  .board.centered {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .slider .slider-item .content {
+    @apply mt-20 p-10 pb-16;
+    border-radius: 50px 50px 50px 0;
+    bottom: initial;
+  }
+  .feedback {
+    background: linear-gradient(#fff 35%, $primary 35%);
+  }
+  .feedback-col {
+    height: auto;
+  }
+  .board, .board.centered {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 768px) {
+  .container {
+    max-width: 728px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider-item {
+    height: 469px;
+    background-position: -180px;
+  }
+  .slider .slider-item .content {
+    @apply w-3/5;
+  }
+  .therapy-col a > div {
+    height: 240px;
+    width: 240px;
+  }
+  .tester {
+    width: 240px;
+  }
+  .certifications-slider .slick-prev, .feedback-slider .slick-prev {
+    left: -30px;
+  }
+  
+  .certifications-slider .slick-next, .feedback-slider .slick-next {
+    right: -30px;
+  }
+  .contact-img {
+    height: 620px;
+  }
+  .board-wrap {
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 992px) {
+  .board-wrap {
+    justify-content: initial;
+  }
+  .slider-item {
+    height: 565px;
+    background-position:initial;
+  }
+  .slider .slider-item .content {
+    @apply w-2/5;
+  }
+  .therapy-col a > div {
+    height: 280px;
+    width: 280px;
+  }
+  .tester {
+    width: 280px;
+  }
+  .prices-col {
+    width: 420px;
+  }
+  .certifications-slider .slick-prev, .feedback-slider .slick-prev {
+    left: -60px;
+  }
+  
+  .certifications-slider .slick-next, .feedback-slider .slick-next {
+    right: -60px;
+  }
+  .contact-img {
+    height: initial;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+@tailwind utilities;

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>clock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home" transform="translate(-1062.000000, -4149.000000)" fill="#0B7C8A" fill-rule="nonzero">
+            <g id="Карта" transform="translate(0.000000, 3738.000000)">
+                <g id="Контактная-информация" transform="translate(130.000000, 371.000000)">
+                    <g id="График-работы" transform="translate(900.000000, 0.000000)">
+                        <g id="clock" transform="translate(32.000000, 40.000000)">
+                            <path d="M14.9995,0 C6.7156,0 0,6.7158 0,14.9995 C0,23.2832 6.7156,29.9995 14.9995,29.9995 C23.2834,29.9995 29.9995,23.2832 29.9995,14.9995 C29.9995,6.7158 23.2834,0 14.9995,0 Z M21.4842,17.8524 L15.125,17.8524 C15.1035,17.8524 15.0835,17.8472 15.0622,17.8464 C15.0409,17.8474 15.021,17.8524 14.9994,17.8524 C14.4265,17.8524 13.962,17.3879 13.962,16.815 L13.962,6.2249 C13.962,5.652 14.4265,5.1875 14.9994,5.1875 C15.5723,5.1875 16.0368,5.652 16.0368,6.2249 L16.0368,15.7776 L21.4838,15.7776 C22.0567,15.7776 22.5212,16.2421 22.5212,16.815 C22.5212,17.3879 22.0571,17.8524 21.4842,17.8524 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
